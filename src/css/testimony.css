@@ -34,3 +34,7 @@
   font-size: 1.1rem;
   text-align: justify;
 }
+
+.testimony-content-wrapper span {
+  font-weight: bold;
+}

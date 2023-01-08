@@ -1,23 +1,23 @@
 import React from 'react';
 import '../../css/testimony.css';
 
-export function Testimony() {
+export function Testimony(props) {
   return (
     <div className='testimony-wrapper'>
       <img 
-      src={require('../../imgs/t-emma.png')}
+      src={require(`../../${props.img}`)}
       className='testimony-img' 
-      alt='Emma pic' />
+      alt={props.name + ' pic' } />
 
       <div className='testimony-content-wrapper'>
         <p className='testimony-name'>
-          <span>Emma Bostian</span> in Sweden
+          <span>{props.name}</span> in {props.country}
         </p>
         <p className='testimony-position'>
-          Software Engineer at <span>Spotify</span>
+          {props.position} at <span>{props.company}</span>
         </p>
         <p className='testimony-quote'>
-          "I've always struggled with learning JavaScript. I've taken many courses but freeCodeCamp's course was the one which stuck. Studying JavaScript as well as data structures and algorithms on <span>freeCodeCamp gave me the skills</span> and confidence I needed to land my dream job as a software engineer at Spotify."
+          "{props.quote}"
         </p>
       </div>
     </div>
